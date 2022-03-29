@@ -1,6 +1,178 @@
 * {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  background-color: #e5e5e5;
+  margin: 0 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body .main {
+  padding: 60px;
+  background-color: #fff;
+}
+
+.main {
+  margin: 0 auto;
+}
+.main .quote {
+  display: flex;
+  margin-bottom: 25px;
+}
+.main .quote img {
+  width: 255px;
+  height: 255px;
+  margin-right: 25px;
+}
+.main .quote p {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  width: 650px;
+}
+.main .form_container {
+  display: flex;
+  justify-content: space-between;
+}
+.main .form_container form {
+  display: flex;
+  padding: 25px;
+  margin-bottom: 93px;
+  border: 2px solid #000;
+  border-radius: 15px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.main .form_container form + form {
+  margin-left: 35px;
+}
+.main .form_container form input {
+  background-color: #ebebeb;
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  padding: 13px 16px;
+  box-sizing: border-box;
+}
+.main .form_container form input + input {
+  margin-left: 20px;
+}
+.main .form_container form .search_field {
+  width: 400px;
+  margin-left: 22px;
+  margin-right: 22px;
+}
+.main .form_container form button {
+  margin-left: 90px;
+  background-color: #f39c12;
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  padding: 6px 45px;
+  color: #fff;
+}
+
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 407px);
+  grid-template-rows: auto;
+  grid-column-gap: 75px;
+  grid-row-gap: 58px;
+}
+.card_container .card {
+  width: 407px;
+  height: 250px;
+  border: none;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  line-height: 59px;
+  position: relative;
+}
+.card_container .card .closure {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  border: 5px solid #000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media (max-width: 1470px) {
+  .main .form_container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main .form_container form {
+    margin-bottom: 25px;
+  }
+  .main .form_container form + form {
+    margin-bottom: 93px;
+  }
+  .main .form_container form#search_word {
+    margin-left: 0;
+  }
+}
+@media (max-width: 920px) {
+  .main .form_container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .main .form_container form#add_word {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main .form_container form#add_word input {
+    margin-bottom: 25px;
+    margin-left: 0;
+  }
+  .main .form_container form#add_word button {
+    margin-left: 0;
+  }
+}
+@media (max-width: 900px) {
+  .main .form_container form .search_field {
+    width: 200px;
+  }
+}
+@media (max-width: 700px) {
+  .main .quote {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main .quote img {
+    width: 200px;
+    height: 200px;
+  }
+  .main .quote p {
+    font-size: 20px;
+    line-height: 24px;
+    width: auto;
+  }
+  .main .form_container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main .form_container form .search_field {
+    width: 150px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -4,11 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="media/favicon.ico">
     <link rel="stylesheet" type= "text/css" href="style/style.css">
-    <title>lesson</title>
+    <title>My dictionary</title>
 </head>
 <body>
-    <h1>Hello</h1>
-    <script type="text/javascript" src="javascript/script.js"></script>
+    <div class="main">
+        <div class="quote">
+            <img src="media/brainpinky.jpg" alt="pic">
+            <p>— Брейн, возьми разговорник!<br>
+                — Ба, Пинки! Я буду общаться на языке туристов: громко орать, как будто здесь все глупые и глухие!</p>
+        </div>
+        <div class="form_container">
+            <form action="" id="add_word">
+                <input type="text" name="word" id="word_input" placeholder="слово">
+                <input type="text" name="translation" id="translation_input" placeholder="перевод">
+                <input type="text" name="color" id="color_input" placeholder="цвет">
+                <button>Добавить</button>
+            </form>
+
+            <form action="" id="search_word">
+                <input class="search_field" type="text" name="search" id="word_search" placeholder="найти">
+            </form>
+        </div>
+
+        <div class="card_container">
+        </div>
+    </div>
+    <script type="text/javascript" src="jscript/script.js"></script>
 </body>
 </html>
