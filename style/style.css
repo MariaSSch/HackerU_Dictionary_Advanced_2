@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -74,16 +75,36 @@ body .main {
   border-radius: 25px;
   padding: 6px 45px;
   color: #fff;
+  cursor: pointer;
 }
 
-.card_container {
+.search_result::before {
+  content: "Результат поиска";
+  position: absolute;
+  top: -25px;
+  left: 0;
+}
+
+.search_result::after {
+  content: "Словарь";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+}
+
+.card_container, .search_result {
   display: grid;
   grid-template-columns: repeat(auto-fit, 407px);
   grid-template-rows: auto;
   grid-column-gap: 75px;
   grid-row-gap: 58px;
+  margin-bottom: 25px;
+  border: 2px solid grey;
+  border-radius: 15px;
+  padding: 25px;
+  position: relative;
 }
-.card_container .card {
+.card_container .card, .search_result .card {
   width: 407px;
   height: 250px;
   border: none;
@@ -95,11 +116,12 @@ body .main {
   font-size: 50px;
   line-height: 59px;
   position: relative;
+  cursor: pointer;
 }
-.card_container .card .closure {
+.card_container .card .closure, .search_result .card .closure {
   position: absolute;
-  top: -25px;
-  right: -25px;
+  top: -20px;
+  right: -20px;
   border: 5px solid #000;
   border-radius: 50%;
   width: 50px;
@@ -110,6 +132,9 @@ body .main {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+.card_container .card .hide, .search_result .card .hide {
+  display: none;
 }
 
 @media (max-width: 1470px) {
